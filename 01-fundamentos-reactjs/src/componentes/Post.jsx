@@ -1,4 +1,4 @@
-import { format, formatDistanceToNow } from 'date-fns';
+import { format, formatDistanceToNow, set } from 'date-fns';
 import ptBR from 'date-fns/locale/pt-BR'
 
 import { Avatar } from './Avatar';
@@ -35,8 +35,11 @@ export function Post({ author, publishedAt, content }) {
         setNewCommentText(event.target.value)
     }
 
-    function onDeletarComentario(comment) {
-        console.log(`Deletar comentario ${comment}`)
+    function onDeletarComentario(commentToDelete) {
+        const listaDeComentariosSemOQueColoquei = comments.filter(comment => {
+            return comment != commentToDelete;
+        })
+        setComents(listaDeComentariosSemOQueColoquei)
     }
 
     return (
