@@ -14,6 +14,8 @@ export function Post({ author, publishedAt, content }) {
 
     const [newCommentText, setNewCommentText] = useState('')
 
+    const nadaNoComentario = newCommentText.length == 0
+
     const publishedDateFormatted = format(publishedAt, "d 'de' LLLL 'às' HH:mm'h'", {
         locale: ptBR,
     });
@@ -74,10 +76,11 @@ export function Post({ author, publishedAt, content }) {
                     name='comment'
                     value={newCommentText}
                     placeholder='Escreva um comentário...'
-                    onChange={fireNewCommentChange}
+                    onChange={fireNewCommentChange} 
+                    required
                 />
                 <footer>
-                    <button type='submit'>Publicar</button>
+                    <button type='submit' disabled={nadaNoComentario}>Publicar</button>
                 </footer>
             </form>
 
