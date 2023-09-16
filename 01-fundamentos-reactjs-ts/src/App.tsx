@@ -1,6 +1,6 @@
-import { Header } from "./componentes/Header.jsx"
-import { Post } from "./componentes/Post.jsx"
-import { Sidebar } from "./componentes/Sidebar.jsx"
+import { Header } from "./componentes/Header"
+import { Post, PostType } from "./componentes/Post"
+import { Sidebar } from "./componentes/Sidebar"
 
 import styles from "./App.module.css"
 import './global.css'
@@ -9,7 +9,7 @@ import './global.css'
 // publishedAt: Date
 // content: String
 
-const posts = [
+const posts: PostType[] = [
   {
     id: 1,
     author: {
@@ -57,9 +57,7 @@ export function App() {
             return (
               <Post 
                 key={post.id}
-                author={post.author} 
-                content={post.content} 
-                publishedAt={post.publishedAt} 
+                post={post}
               />
             )
           })}
