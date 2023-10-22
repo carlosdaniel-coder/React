@@ -29,7 +29,7 @@ export function Home() {
 
   type NewCycleFormDate = zod.infer<typeof newCycleFormValidationSchema>
 
-  const { register, handleSubmit, watch } = useForm<NewCycleFormDate>({
+  const { register, handleSubmit, watch, reset } = useForm<NewCycleFormDate>({
     resolver: zodResolver(newCycleFormValidationSchema),
     defaultValues: {
       task: '',
@@ -42,6 +42,7 @@ export function Home() {
 
   function dadosSubmimit(data: NewCycleFormDate) {
     console.log(data)
+    reset()
   }
 
   return (
