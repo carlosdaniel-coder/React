@@ -1,0 +1,52 @@
+{
+  "transactions": [
+    {
+      "id": "1",
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": 12000,
+      "createdAt": "2024-04-13T00:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "description": "Hamburguer",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 59,
+      "createdAt": "2024-04-10T00:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "description": "Pastel de forno",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": 25,
+      "createdAt": "2024-04-10T00:00:00.000Z"
+    },
+    {
+      "id": "af02",
+      "description": "Desenvolvimento App",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2024-07-26T18:54:49.934Z"
+    },
+    {
+      "description": "xbox",
+      "price": 5000,
+      "category": "Entretenimento",
+      "type": "outcome",
+      "createdAt": "2024-07-26T21:00:36.718Z",
+      "id": "7HIKITZ"
+    },
+    {
+      "description": "carne",
+      "price": 12,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2024-07-29T18:29:02.664Z",
+      "id": "5M5XcVa"
+    }
+  ]
+}
