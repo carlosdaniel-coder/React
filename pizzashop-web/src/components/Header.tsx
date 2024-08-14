@@ -1,9 +1,9 @@
-import { Separator } from '@radix-ui/react-separator'
 import { Home, Pizza, Utensils } from 'lucide-react'
 
 import { AccountMenu } from './account-menu'
 import { NavLink } from './nav-link'
 import { ThemeToggle } from './theme/theme-toggle'
+import { Separator } from './ui/separator'
 
 export function Header() {
   return (
@@ -18,7 +18,7 @@ export function Header() {
             <Home className="h-4 w-4" />
             Início
           </NavLink>
-          <NavLink to="/">
+          <NavLink to="/pedidos">
             <Utensils className="h-4 w-4" />
             Pedidos
           </NavLink>
